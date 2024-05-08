@@ -1,0 +1,19 @@
+<app-palabra *ngFor="let item of iteracion; index as i" [palabra]="palabra" [cont]="i" [turno]="turno"></app-palabra>
+<div class="tablero">
+    <div class="dificultad">
+      <p>Selecciona el nivel de dificultad:</p>
+      <button (click)="cambiarNivelDificultad('facil')">Fácil</button>
+      <button (click)="cambiarNivelDificultad('normal')">Normal</button>
+      <button (click)="cambiarNivelDificultad('dificil')">Difícil</button>
+    </div>
+  
+    <div class="intentos">
+      <p>Intentos restantes: {{ intentosRestantes }}</p>
+    </div>
+  
+    <div class="palabra">
+      <!-- Aquí va tu lógica para mostrar la palabra oculta -->
+    </div>
+  </div>  
+
+<button (click)="turno=turno+1">Enviar</button>
